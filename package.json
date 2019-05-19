@@ -1,0 +1,19 @@
+{
+  "name": "sg-libraries",
+  "version": "1.0.0",
+  "description": "Just a test area.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ireneo Cobar Jr",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "gulp": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.12.0"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.5"
+  }
+}

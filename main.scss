@@ -1,0 +1,66 @@
+.file-theme {
+    background: #E91E63;
+
+    .center-main {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.flip-card {
+    width: 600px;
+    height: 300px;
+    background: #C2185B;
+    box-sizing: border-box;
+    border: 5px solid white;
+    transition: transform .8s ease-out;
+    padding: 5px;
+    // border-radius: 150px;
+
+    &:hover {
+        // animation: flip 6s linear;
+        transform: perspective(600px) rotateY(25deg) rotateX(0deg);
+    }
+
+    &:hover .split {
+        animation-name: split;
+        animation-duration: 4s;
+        animation-fill-mode: forwards;
+    }
+
+    .split {
+        width: 100%;
+        height: 25%;
+        transform-origin: left;
+    }
+
+    & div:nth-child(1) {
+        background-image: url(https://picsum.photos/580/280);
+        background-position: 0 0;
+        animation-delay: 0.2s;
+    }
+    & div:nth-child(2) {
+        background-image: url(https://picsum.photos/580/280);
+        background-position: 0 33.33%;
+        animation-delay: 0.4s;
+    }
+    & div:nth-child(3) {
+        background-image: url(https://picsum.photos/580/280);
+        background-position: 0 66.66%;
+        animation-delay: 0.6s;
+    }
+    & div:nth-child(4) {
+        background-image: url(https://picsum.photos/580/280);
+        background-position: 0 100%;
+        animation-delay: 0.8s;
+    }
+}
+
+@keyframes split {
+    0% {transform: perspective(600px) rotateY(0deg) translateX(0);}
+    50% {transform: perspective(600px) rotateY(180deg) translateX(-100%);}
+    100% {transform: perspective(600px) rotateY(360deg) translateX(0);}
+}
